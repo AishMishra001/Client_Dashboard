@@ -47,3 +47,22 @@ To learn more about **Refine**, please check out the [Documentation](https://ref
 ## License
 
 MIT
+
+
+
+----------------------------------------------------------------------------------------------------------------
+
+# Making of React Dashboard 
+
+src/Providers/index.tsx :
+
+exporting client from GraphQLClient(api,{
+    fetch : ()=>{
+
+    }
+    })
+
+src/Providers/fetch-wrapper.js : 
+
+
+
