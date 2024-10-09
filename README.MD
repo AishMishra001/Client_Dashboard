@@ -1,57 +1,3 @@
-# React-Dashboard
-
-<div align="center" style="margin: 30px;">
-    <a href="https://refine.dev">
-    <img alt="refine logo" src="https://refine.ams3.cdn.digitaloceanspaces.com/readme/refine-readme-banner.png">
-    </a>
-</div>
-<br/>
-
-This [Refine](https://github.com/refinedev/refine) project was generated with [create refine-app](https://github.com/refinedev/refine/tree/master/packages/create-refine-app).
-
-## Getting Started
-
-A React Framework for building internal tools, admin panels, dashboards & B2B apps with unmatched flexibility ✨
-
-Refine's hooks and components simplifies the development process and eliminates the repetitive tasks by providing industry-standard solutions for crucial aspects of a project, including authentication, access control, routing, networking, state management, and i18n.
-
-## Available Scripts
-
-### Running the development server.
-
-```bash
-    npm run dev
-```
-
-### Building for production.
-
-```bash
-    npm run build
-```
-
-### Running the production server.
-
-```bash
-    npm run start
-```
-
-## Learn More
-
-To learn more about **Refine**, please check out the [Documentation](https://refine.dev/docs)
-
-- **NestJS Query Data Provider** [Docs](https://refine.dev/docs/data/packages/nestjs-query/)
-- **Ant Design** [Docs](https://refine.dev/docs/ui-frameworks/antd/tutorial/)
-- **React Router** [Docs](https://refine.dev/docs/core/providers/router-provider/)
-- **Custom Auth Provider** [Docs](https://refine.dev/docs/core/providers/auth-provider/)
-
-## License
-
-MIT
-
-
-
-----------------------------------------------------------------------------------------------------------------
-
 # Making of React Dashboard 
 
 src/Providers/index.tsx :
@@ -64,5 +10,44 @@ exporting client from GraphQLClient(api,{
 
 src/Providers/fetch-wrapper.js : 
 
+  const customFetch = ()=>{
+
+  }
+
+  const getGraphQLErrors = () =>{
+
+  }
+
+  const fetchWrapper = (url , options)=>{
+    const response = await customfetch(url , options ) ; 
+    const body = response.json() ; 
+
+    const error = getGraphQLErrors(body) ; 
+
+    if(error){
+        throw error ; 
+    }
+
+    return  body ;  
+  }
 
 
+
+
+
+
+
+## Learnings : 
+
+1. **WebSocket** : WebSocket is a communication protocol that provides full-duplex, bidirectional communication channels over a single TCP connection. Here are the key points about WebSocket:
+
+***Real-time communication***: It allows real-time data transfer between a client (typically a web browser) and a server.
+
+***Persistent connection***: Unlike HTTP, which is stateless, WebSocket maintains an open connection, reducing overhead for multiple requests.
+
+***Bidirectional***: Both the client and server can send messages to each other at any time, without waiting for a request.
+
+***Efficiency***: It's more efficient than polling or long-polling techniques for real-time updates.
+
+***Wide support***: Most modern web browsers and server technologies support WebSocket.
+Use cases: Commonly used in applications requiring live updates like chat systems, gaming, financial tickers, and collaborative tools.
