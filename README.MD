@@ -2,14 +2,16 @@
 
 src/Providers/index.tsx :
 
+```
 exporting client from GraphQLClient(api,{
     fetch : ()=>{
 
     }
     })
-
+``` 
 src/Providers/fetch-wrapper.js : 
 
+```
   const customFetch = ()=>{
 
   }
@@ -31,7 +33,7 @@ src/Providers/fetch-wrapper.js :
     return  body ;  
   }
 
-
+```
 
 
 
@@ -51,3 +53,6 @@ src/Providers/fetch-wrapper.js :
 
 ***Wide support***: Most modern web browsers and server technologies support WebSocket.
 Use cases: Commonly used in applications requiring live updates like chat systems, gaming, financial tickers, and collaborative tools.
+
+2. **Live Provider**
+Live Provider is Refine's built-in provider that enables real-time updates and interactions between the server and the client. Refine being agnostic as always allows you to integrate any solution of your choice
